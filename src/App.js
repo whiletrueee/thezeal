@@ -1,9 +1,10 @@
 import './styles/App.css';
+import Navbar from '../src/shared/navbar/navBar.js';
 
 function App() {
   return (
     <div>
-      hello world
+      <Navbar />
     </div>
   );
 }

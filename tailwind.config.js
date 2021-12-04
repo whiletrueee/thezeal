@@ -3,10 +3,14 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        primary : ['Chomsky'],
+        secondary : ['Noticia']
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
+}
 }
