@@ -1,4 +1,14 @@
 function Navbar() {
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  const day = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+
+let m = new Date();
+let w = new Date();
+let din = new Date();
+let weekDay = day[w.getDate()];
+let month = months[m.getMonth()];
+
   return (
     <div>
       <div className="mt-2 flex justify-center items-center md:space-x-7 lg:space-x-12 mx-3 p-5">
@@ -27,7 +37,7 @@ function Navbar() {
         <div className="font-secondary text-base flex justify-center items-center md:gap-6 lg:gap-12">
           <div className="">VOL.CLXXI .... No.59,237</div>
           <div className="text-sm">© 2021 The Zeal Company</div>
-          <div className="">INDIA, SUNDAY, DECEMBER 5,2021</div>
+          <div className="">INDIA, {weekDay.toUpperCase()}, {month.toUpperCase()} {din.getDate()},2021</div>
         </div>
         <div className="flex justify-center items-center">
           <div className="">$ 3.00</div>
