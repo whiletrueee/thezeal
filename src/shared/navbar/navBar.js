@@ -6,6 +6,7 @@ function Navbar() {
 let m = new Date();
 let w = new Date();
 let din = new Date();
+let year = new Date();
 let weekDay = day[w.getDate()];
 let month = months[m.getMonth()];
 
@@ -37,7 +38,7 @@ let month = months[m.getMonth()];
         <div className="font-secondary text-base flex justify-center items-center md:gap-6 lg:gap-12">
           <div className="">VOL.CLXXI .... No.59,237</div>
           <div className="text-sm">© 2021 The Zeal Company</div>
-          <div className="">INDIA, {weekDay.toUpperCase()}, {month.toUpperCase()} {din.getDate()},2021</div>
+          <div className="">INDIA, {weekDay.toUpperCase()}, {month.toUpperCase()} {din.getDate()}, {year.getFullYear()}</div>
         </div>
         <div className="flex justify-center items-center">
           <div className="">$ 3.00</div>
