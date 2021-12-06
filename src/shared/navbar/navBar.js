@@ -1,13 +1,13 @@
 function Navbar() {
   const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-  const day = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+  const day = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 let m = new Date();
 let w = new Date();
 let din = new Date();
 let year = new Date();
-let weekDay = day[w.getDate()];
+let weekDay = day[w.getDay()];
 let month = months[m.getMonth()];
 
   return (
