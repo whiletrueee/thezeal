@@ -8,7 +8,7 @@ import useFetch from "../../hooks/useFetch";
 function HeroLeft() {
 
   const { FetchedData, Fetching, Error } = useFetch(
-    "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=52d1165eced548f187c78653a32885ee");
+    "https://alexa-news-api.herokuapp.com/harshit?category=technology");
 
 
   return (

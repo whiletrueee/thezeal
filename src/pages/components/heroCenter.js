@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function HeroCenter(){
     const { FetchedData, Fetching, Error } = useFetch(
-        "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=52d1165eced548f187c78653a32885ee");
+        "https://alexa-news-api.herokuapp.com/harshit?category=technology");
     
 
     return(
