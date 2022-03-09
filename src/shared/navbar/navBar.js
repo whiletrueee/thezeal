@@ -11,7 +11,7 @@ let weekDay = day[w.getDay()];
 let month = months[m.getMonth()];
 
   return (
-    <div>
+    <div className="mx-auto max-w-6xl">
       <div className="mt-2 flex justify-center items-center md:space-x-7 lg:space-x-12 mx-3 p-5">
         <div>
           <div className="border-2 border-black font-secondary text-base p-5 font-semibold action912px">
