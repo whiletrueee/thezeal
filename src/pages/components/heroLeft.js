@@ -3,6 +3,7 @@ import S2 from "./sideComponents/S2";
 import S3 from "./sideComponents/S3";
 import HZ from "./sideComponents/smallHZline";
 import useFetch from "../../hooks/useFetch";
+import S1DataLoader from "../../shared/loader/S1DataLoader";
 
 
 function HeroLeft() {
@@ -14,11 +15,13 @@ function HeroLeft() {
   return (
     <div className="border-r-2 border-gray-200 w-3/12 font-secondary flex flex-col">
       <div className="mr-4 text-right">
-        {Fetching && <h1>Data is being Fetched</h1>}
-        {FetchedData && <S1
+        {Fetching && <S1DataLoader />}
+        {FetchedData && 
+        <S1
           Line={`${FetchedData.articles[0].title}`}
           margin=""
-        />}
+        />
+        }
         {Error && <h2>An Error has occured</h2>}
       </div>
       <div className="mx-auto mt-3">

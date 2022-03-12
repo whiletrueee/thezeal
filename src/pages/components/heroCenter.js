@@ -2,6 +2,8 @@ import CenterImage from "./centerComponent/centerImage";
 import useFetch from "../../hooks/useFetch";
 import CenterS1 from "./centerComponent/centerS1";
 import CenterS2 from "./centerComponent/centerS2";
+import { useState } from "react";
+import HeroImageLoader from "../../shared/loader/heroImage";
 
 function HeroCenter() {
   const { FetchedData, Fetching, Error } = useFetch(
@@ -10,18 +12,19 @@ function HeroCenter() {
 
   return (
     <div className="w-7/12">
-      {Fetching && <h1>Data is being Fetched</h1>}
+      {Fetching && <HeroImageLoader />}
       {FetchedData && (
         <CenterImage
           photographer={`${
-            FetchedData.articles[0].author
-              ? FetchedData.articles[0].author
+            FetchedData.articles[7].author
+              ? FetchedData.articles[7].author
               : "By- Anonymus"
           }`}
-          image={`${FetchedData.articles[0].urlToImage}`}
-          description={`${FetchedData.articles[0].description}`}
+          image={`${FetchedData.articles[7].urlToImage}`}
+          description={`${FetchedData.articles[7].description}`}
         />
       )}
+
       {Error && <h2>An Error has occured</h2>}
 
       <div className="flex gap-3 justify-around">
