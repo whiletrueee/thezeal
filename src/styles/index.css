@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 
@@ -17,6 +19,9 @@
     }
 }
 
+.maxWidth{
+    max-width: 85vw;
+}
 .hzHeight{
     height: 1px;
 }

@@ -14,6 +14,7 @@ function HeroLeft() {
 
   return (
     <div className="border-r-2 border-gray-200 w-3/12 font-secondary flex flex-col">
+
       <div className="mr-4 text-right">
         {Fetching && <S1DataLoader />}
         {FetchedData && 
@@ -30,7 +31,7 @@ function HeroLeft() {
       <div className="mx-auto">
       {Fetching && <h1>Data is being Fetched</h1>}
       {FetchedData && 
-      <S2 Line={`${FetchedData.articles[1].title}`} />}
+      <S2 Line={`${FetchedData.articles[0].description}`} />}
       {Error && <h2>An Error has occured</h2>}
       </div>
       <div className="mx-auto">
@@ -45,6 +46,40 @@ function HeroLeft() {
         />}
         {Error && <h2>An Error has occured</h2>}
       </div>
+
+
+      <div className="mr-4 text-right">
+        {Fetching && <S1DataLoader />}
+        {FetchedData && 
+        <S1
+          Line={`${FetchedData.articles[2].title}`}
+          margin=""
+        />
+        }
+        {Error && <h2>An Error has occured</h2>}
+      </div>
+      <div className="mx-auto mt-3">
+        <HZ />
+      </div>
+      <div className="mx-auto">
+      {Fetching && <h1>Data is being Fetched</h1>}
+      {FetchedData && 
+      <S2 Line={`${FetchedData.articles[2].description}`} />}
+      {Error && <h2>An Error has occured</h2>}
+      </div>
+      <div className="mx-auto">
+        <HZ />
+      </div>
+      <div className="mt-3">
+      {Fetching && <h1>Data is being Fetched</h1>}
+      {FetchedData && 
+        <S3
+          author={`${FetchedData.articles[3].author?FetchedData.articles[3].author:"Anonymus"}`}
+          content={`${FetchedData.articles[3].content}`}
+        />}
+        {Error && <h2>An Error has occured</h2>}
+      </div>
+
     </div>
   );
 }
