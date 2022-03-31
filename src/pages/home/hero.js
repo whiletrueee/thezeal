@@ -6,7 +6,7 @@ function Hero() {
   
   return (
     <div>
-      <div className="flex justify-center items-top mt-3 gap-2 mx-auto max-w-6xl">
+      <div className="flex justify-center items-top mt-3 gap-2 mx-auto maxWidth">
         <HeroLeft />
         <HeroCenter />
         <HeroRight />
