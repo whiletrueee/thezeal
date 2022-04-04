@@ -4,6 +4,7 @@ import S3 from "./sideComponents/S3";
 import HZ from "./sideComponents/smallHZline";
 import useFetch from "../../hooks/useFetch";
 import S1DataLoader from "../../shared/loader/S1DataLoader";
+import S3DataLoader from "../../shared/loader/S3DataLoader";
 
 
 function HeroLeft() {
@@ -29,7 +30,7 @@ function HeroLeft() {
         <HZ />
       </div>
       <div className="mx-auto">
-      {Fetching && <h1>Data is being Fetched</h1>}
+      {Fetching && <h1><S1DataLoader /></h1>}
       {FetchedData && 
       <S2 Line={`${FetchedData.articles[0].description}`} />}
       {Error && <h2>An Error has occured</h2>}
@@ -38,7 +39,7 @@ function HeroLeft() {
         <HZ />
       </div>
       <div className="mt-3">
-      {Fetching && <h1>Data is being Fetched</h1>}
+      {Fetching && <h1><S3DataLoader /></h1>}
       {FetchedData && 
         <S3
           author={`${FetchedData.articles[1].author?FetchedData.articles[1].author:"Anonymus"}`}
@@ -62,7 +63,7 @@ function HeroLeft() {
         <HZ />
       </div>
       <div className="mx-auto">
-      {Fetching && <h1>Data is being Fetched</h1>}
+      {Fetching && <h1><S1DataLoader /></h1>}
       {FetchedData && 
       <S2 Line={`${FetchedData.articles[2].description}`} />}
       {Error && <h2>An Error has occured</h2>}
@@ -71,7 +72,7 @@ function HeroLeft() {
         <HZ />
       </div>
       <div className="mt-3">
-      {Fetching && <h1>Data is being Fetched</h1>}
+      {Fetching && <h1><S3DataLoader /></h1>}
       {FetchedData && 
         <S3
           author={`${FetchedData.articles[3].author?FetchedData.articles[3].author:"Anonymus"}`}

@@ -15,7 +15,7 @@ function Navbar() {
       <div className="mx-auto maxWidth">
       <div className="mt-2 flex justify-around items-center md:space-x-7 lg:space-x-12 mx-3 p-5">
         <div>
-          <div className="border-2 border-black font-secondary text-base p-5 font-semibold action912px">
+          <div className="border-2 border-black font-secondary text-sm lg:text-base p-5 font-semibold action912px">
             "All the News
             <br />
             That's Fit to Display "
@@ -27,7 +27,7 @@ function Navbar() {
         </div>
 
         <div className="w-2/12 boder-2 flex flex-col justify-center items-center action912px">
-          <div className="font-sans font-black text-base">Late Edition</div>
+          <div className="font-sans font-black text-sm md:text-base">Late Edition</div>
           <div className="font-secondary text-xs">
             "Today, abundant sunshine, a mild af ternoon, a light breeze, high
             66. To night, partly cloudy skies, low 51. To morrow, partly sunny,
