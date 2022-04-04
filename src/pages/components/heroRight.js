@@ -3,6 +3,8 @@ import S2 from "./sideComponents/S2";
 import S3 from "./sideComponents/S3";
 import HZ from "./sideComponents/smallHZline";
 import useFetch from "../../hooks/useFetch";
+import S1DataLoader from "../../shared/loader/S1DataLoader";
+import S3DataLoader from "../../shared/loader/S1DataLoader";
 
 // https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=52d1165eced548f187c78653a32885ee
 function HeroRight() {
@@ -15,7 +17,7 @@ function HeroRight() {
 
 
       <div className="mr-auto ml-2">                                {/* S1 */}
-        {Fetching && <h1>Data is being Fetched</h1>}
+        {Fetching && <h1><S1DataLoader /></h1>}
         {FetchedData && (
           <S1 Line={`${FetchedData.articles[0].title}`} margin="" />
         )}
@@ -25,7 +27,7 @@ function HeroRight() {
         <HZ />
       </div>
       <div className="mx-auto">                                          {/* S2 */}
-        {Fetching && <h1>Data is being Fetched</h1>}
+        {Fetching && <h1><S1DataLoader /> </h1>}
         {FetchedData && <S2 Line={`${FetchedData.articles[0].description}`} />}
         {Error && <h2>An Error has occured</h2>}
       </div>
@@ -33,7 +35,7 @@ function HeroRight() {
         <HZ />
       </div>
        <div className="mt-3">                                        {/* S3 */}
-        {Fetching && <h1>Data is being Fetched</h1>}
+        {Fetching && <h1><S3DataLoader /></h1>}
         {FetchedData && (
           <S3
             author={`${

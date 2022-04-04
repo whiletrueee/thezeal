@@ -1,8 +1,8 @@
 import CenterImage from "./centerComponent/centerImage";
 import useFetch from "../../hooks/useFetch";
 import CenterS1 from "./centerComponent/centerS1";
-import CenterS2 from "./centerComponent/centerS2";
 import HeroImageLoader from "../../shared/loader/heroImage";
+import CenterS1DataLoader from "../../shared/loader/CenterS1DataLoader";
 
 function HeroCenter() {
   const { FetchedData, Fetching, Error } = useFetch(
@@ -37,6 +37,7 @@ function HeroCenter() {
       {Error && <h2>An Error has occured</h2>}
 
       <div className="grid grid-cols-2 gap-4">
+      {Fetching && <CenterS1DataLoader />}
         {FetchedData && (
           <CenterS1
             image={`${FetchedData.articles[1].urlToImage}`}
