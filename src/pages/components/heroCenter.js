@@ -9,16 +9,6 @@ function HeroCenter() {
     "https://alexa-news-api.herokuapp.com/harshit?category=technology"
   );
 
-  let i = 0;
-
-  // for(i=0; i<FetchedData.articles.length; i++){
-  //   if(FetchedData.articles[i].urlToImage && FetchedData.articles[i].description){
-  //     break;
-  //   }else{
-  //     continue;
-  //   }
-  // }
-
   return (
     <div className="w-7/12">
       {Fetching && <HeroImageLoader />}
