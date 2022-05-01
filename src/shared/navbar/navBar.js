@@ -1,4 +1,4 @@
-function Navbar() {
+function Navbar(props) {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
     const day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -39,12 +39,12 @@ function Navbar() {
       <div className="flex justify-around mx-9 mt-2 px-4 border-t-2 border-b-4 border-black py-1">
       <div className="text-sm">© 2021 The Zeal Company</div>
         <div className="font-secondary text-base flex justify-center items-center md:gap-6 lg:gap-12">
-          <div className="cursor-pointer hover:text-gray-400">Health</div>
-          <div className="cursor-pointer hover:text-gray-400">Business</div>
-          <div className="cursor-pointer hover:text-gray-400">Entertainment</div>
-          <div className="cursor-pointer hover:text-gray-400">Science</div>
-          <div className="cursor-pointer hover:text-gray-400">Technology</div>
-          <div className="cursor-pointer hover:text-gray-400">Sports</div>
+          <div className="cursor-pointer hover:text-gray-400" onClick={()=>{props.setDomain('Health')}}>Health</div>
+          <div className="cursor-pointer hover:text-gray-400" onClick={()=>{props.setDomain('Business')}}>Business</div>
+          <div className="cursor-pointer hover:text-gray-400" onClick={()=>{props.setDomain('Entertainment')}}>Entertainment</div>
+          <div className="cursor-pointer hover:text-gray-400" onClick={()=>{props.setDomain('Science')}}>Science</div>
+          <div className="cursor-pointer hover:text-gray-400" onClick={()=>{props.setDomain('Technology')}}>Technology</div>
+          <div className="cursor-pointer hover:text-gray-400" onClick={()=>{props.setDomain('Sports')}}>Sports</div>
         </div>
         <div className="flex justify-center items-center">
         <div className="">INDIA, {weekDay.toUpperCase()}, {month.toUpperCase()} {din.getDate()}, {year.getFullYear()}</div>
