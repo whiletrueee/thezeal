@@ -8,7 +8,7 @@ import { JellyTriangle } from '@uiball/loaders'
 
 function Hero(props) {
   const { FetchedData, Fetching, Error } = useFetch(
-    `https://alexa-news-api.herokuapp.com/harshit?category=${props.Domain}`);
+    `https://j0tt3k.deta.dev/harshit?category=${props.Domain}`);
 
   return (
     <div>
